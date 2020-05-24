@@ -133,11 +133,8 @@ STATIC_URL = '/static/'
 
 
 
-
-MEDIA_URL = '/images/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-
+MEDIA_ROOT = MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
