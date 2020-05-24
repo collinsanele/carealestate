@@ -147,5 +147,8 @@ EMAIL_HOST_PASSWORD = 'housewife90'
 
 django_heroku.settings(locals())
 
+# This is new
+del DATABASES['default']['OPTIONS']['sslmode']
+
 
 
