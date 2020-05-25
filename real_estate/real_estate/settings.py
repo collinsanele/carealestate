@@ -156,6 +156,8 @@ AWS_QUERYSTRING_AUTH = False
 
 AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME + '.S3.amazonaws.com'
 
+AWS_DEFAULT_ACL = None
+
 #static media settings
 STATIC_URL = "https://" + AWS_STORAGE_BUCKET_NAME + '.S3.amazonaws.com/'
 
