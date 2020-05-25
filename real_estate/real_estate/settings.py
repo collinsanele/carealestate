@@ -143,39 +143,17 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pycollins2019@gmail.com'
 EMAIL_HOST_PASSWORD = 'housewife90'
 
-#set s3 details
-
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-
-AWS_STORAGE_BUCKET_NAME = 'collinsanele-bucket2'
-AWS_ACCESS_KEY_ID = 'AKIAZVUMIH3R737TB6AU'
-AWS_SECRET_ACCESS_KEY = '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'
-
-AWS_QUERYSTRING_AUTH = False
-
-AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME + '.S3.amazonaws.com'
-
-AWS_DEFAULT_ACL = None
-
-#static media settings
-STATIC_URL = "https://" + AWS_STORAGE_BUCKET_NAME + '.S3.amazonaws.com/'
-
-MEDIA_URL = STATIC_URL + 'media/'
-
-STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder',)
-
-
-
-
-
-
 
 
 django_heroku.settings(locals())
 
-# This is new
-del DATABASES['default']['OPTIONS']['sslmode']
+AWS_ACCESS_KEY_ID = "AKIAZVUMIH3RWAGKHIE4"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "collinsanele"
 
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
